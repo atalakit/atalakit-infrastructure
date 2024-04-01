@@ -1,0 +1,17 @@
+---
+component-roots:
+  - core
+
+inputs:
+  environments:
+    root: "600123456789"
+
+core:
+  resource-groups: {}
+
+valid_env_vars:
+  inputs:
+    environments:
+      root: "600123456789"
+    test_true: true
+    test_false: false

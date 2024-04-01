@@ -1,0 +1,9 @@
+component-roots:
+  - root
+
+inputs: {}
+
+atalakit-root:
+  inputs: {}
+  root:
+    organization: {}
