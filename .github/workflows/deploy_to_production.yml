@@ -1,0 +1,24 @@
+name: Deploy to Production
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        description: 'Version to deploy'
+
+permissions:
+  id-token: write # This is required for the AWS authentication step
+  contents: read # This is required for actions/checkout
+
+jobs:
+  deployment:
+    name: Deploy Service
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy specific version
+        run: echo Deploying Version "${{ github.event.inputs.version }}"
